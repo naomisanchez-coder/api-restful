@@ -1,4 +1,19 @@
 {
   "tickets": [],
-  "notifications": []
+  "notifications": [
+    {
+      "id": "56d85946-36d4-4cbf-89f8-8ee689066940",
+      "type": "email",
+      "message": "Nuevo ticket creado: Problema 1",
+      "status": "pending",
+      "ticketId": "666b47f0-f32a-42e2-8719-c62ef99571b6"
+    },
+    {
+      "id": "380371d6-15b6-4fa9-8c58-0196bb0eb45f",
+      "type": "email",
+      "message": "El ticket 666b47f0-f32a-42e2-8719-c62ef99571b6 fue asignado a Naomi",
+      "status": "pending",
+      "ticketId": "666b47f0-f32a-42e2-8719-c62ef99571b6"
+    }
+  ]
 }

@@ -26,11 +26,12 @@ exports.changeStatus = (req, res) => {
   res.status(200).json(ticket);
 };
 
-exports.delete = (req, res) => {
+exports.delete = (req, res, next) => {
   try {
     service.deleteTicket(req.params.id);
     res.json({ message: "Ticket eliminado correctamente" });
   } catch (err) {
-    res.status(404).json({ message: err.message });
+    err.statusCode = 404;
+    next(err); // Pasa el error al middleware global errorHandler
   }
 };
