@@ -36,3 +36,14 @@ exports.delete = (req, res, next) => {
     next(err); // Pasa el error al middleware global errorHandler
   }
 };
+
+exports.getNotifications = (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const notifications = service.getNotificationsByTicketId(id);
+    res.status(200).json(notifications);
+  } catch (err) {
+    err.statusCode = 404;
+    next(err);
+  }
+};

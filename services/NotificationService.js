@@ -16,6 +16,11 @@ class NotificationService {
     };
     return this.repo.save(notification);
   }
+  
+getByTicketId(ticketId) {
+    const notifications = this.repo.findAll();
+    return notifications.filter(n => n.ticketId === ticketId);
+  }
 
   list() {
     return this.repo.findAll();

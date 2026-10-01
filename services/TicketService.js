@@ -37,7 +37,13 @@ class TicketService {
     }
     return ticket;
   }
-
+getNotificationsByTicketId(ticketId) {
+    const ticket = this.repo.findById(ticketId);
+    if (!ticket) {
+      throw new Error("Ticket no encontrado");
+    }
+    return this.notificationService.getByTicketId(ticketId);
+  }
   list(page, limit) {
     const tickets = this.repo.findAll();
 
