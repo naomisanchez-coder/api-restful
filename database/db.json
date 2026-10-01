@@ -1,5 +1,38 @@
 {
-  "tickets": [],
+  "tickets": [
+    {
+      "id": "1025973b-d6c9-4152-ac6f-8690b4cc3588",
+      "title": "Chuky",
+      "description": "Película de Terror",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "6c951de1-50ba-4e15-9b9b-ddf9049236bd",
+      "title": "Minions",
+      "description": "Película animada que cuenta la historia de unas pequeñas criaturas amarillas que buscan servir al villano más malvado de la historia",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "25997f4b-82a7-492a-82d4-71976327c379",
+      "title": "La sombra de un engaño",
+      "description": "•  Una escritora acepta terminar la saga de una autora accidentada, pero al mudarse a su casa descubre un diario con oscuros secretos familiares.",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "1b0cc129-999a-43a2-a9f0-b6e2e95eede8",
+      "title": "La Isla Olvidada",
+      "description": "Un grupo de animales marinos descubre un continente oculto y debe unirse para protegerlo de unos exploradores humanos",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    }
+  ],
   "notifications": [
     {
       "id": "56d85946-36d4-4cbf-89f8-8ee689066940",
@@ -14,6 +47,34 @@
       "message": "El ticket 666b47f0-f32a-42e2-8719-c62ef99571b6 fue asignado a Naomi",
       "status": "pending",
       "ticketId": "666b47f0-f32a-42e2-8719-c62ef99571b6"
+    },
+    {
+      "id": "8b96d00f-adb4-4b22-845b-6fe1e6145ed3",
+      "type": "email",
+      "message": "Nuevo ticket creado: Chuky",
+      "status": "pending",
+      "ticketId": "1025973b-d6c9-4152-ac6f-8690b4cc3588"
+    },
+    {
+      "id": "fd066569-65b4-4a2e-a0dd-a160aebf3773",
+      "type": "email",
+      "message": "Nuevo ticket creado: Minions",
+      "status": "pending",
+      "ticketId": "6c951de1-50ba-4e15-9b9b-ddf9049236bd"
+    },
+    {
+      "id": "e8ab455b-2e7c-47dc-b1a3-3f0de50196fb",
+      "type": "email",
+      "message": "Nuevo ticket creado: La sombra de un engaño",
+      "status": "pending",
+      "ticketId": "25997f4b-82a7-492a-82d4-71976327c379"
+    },
+    {
+      "id": "bd9221c8-beaa-4959-b5d7-ffa19edec93a",
+      "type": "email",
+      "message": "Nuevo ticket creado: La Isla Olvidada",
+      "status": "pending",
+      "ticketId": "1b0cc129-999a-43a2-a9f0-b6e2e95eede8"
     }
   ]
 }

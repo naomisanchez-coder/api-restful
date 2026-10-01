@@ -7,7 +7,8 @@ exports.create = (req, res) => {
 };
 
 exports.list = (req, res) => {
-  res.status(200).json(service.list());
+  const { page, limit } = req.query;
+  res.status(200).json(service.list(page, limit));
 };
 
 exports.assign = (req, res) => {

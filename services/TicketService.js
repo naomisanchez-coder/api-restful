@@ -38,8 +38,29 @@ class TicketService {
     return ticket;
   }
 
-  list() {
-    return this.repo.findAll();
+  list(page, limit) {
+    const tickets = this.repo.findAll();
+
+    // Si no envían parámetros de paginación, retorna la lista completa por defecto
+    if (!page || !limit) {
+      return tickets;
+    }
+
+    const pageNum = parseInt(page, 10) || 1;
+    const limitNum = parseInt(limit, 10) || 5;
+
+    const startIndex = (pageNum - 1) * limitNum;
+    const endIndex = startIndex + limitNum;
+
+    const paginatedTickets = tickets.slice(startIndex, endIndex);
+
+    return {
+      totalItems: tickets.length,
+      totalPages: Math.ceil(tickets.length / limitNum),
+      currentPage: pageNum,
+      limit: limitNum,
+      data: paginatedTickets
+    };
   }
 
   deleteTicket(id) {
