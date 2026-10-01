@@ -3,10 +3,18 @@ const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
 
+// Importamos los módulos de rutas
+const ticketRoutes = require("./routes/ticket.routes");
+const notificationRoutes = require("./routes/notification.routes");
+
 // Middleware
 app.use(express.json()); // Para leer JSON en las solicitudes
 app.use(cors()); // Permitir solicitudes de otros dominios
 app.use(morgan("dev")); // detalles de cada petición
+
+// Rutas bases
+app.use("/tickets", ticketRoutes);
+app.use("/notifications", notificationRoutes);
 
 // Mensaje de prueba en la raíz
 app.get("/", (req, res) => {
